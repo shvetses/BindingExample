@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Example_01
+namespace Example_02
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -19,11 +19,6 @@ namespace Example_01
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            txtBlock.FontSize+=5;
         }
     }
 }

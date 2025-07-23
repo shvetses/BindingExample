@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Example_01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="150" Width="300">
+    <StackPanel>
+        <Slider x:Name="sld"
+        Minimum="10"
+        Maximum="40"
+        Value="12"
+        TickFrequency="1"
+        TickPlacement="TopLeft"
+        IsSnapToTickEnabled="True"/>
 
-    </Grid>
+        <TextBlock Text="Какой-то текст"
+                   FontSize="{Binding ElementName=sld, Path=Value, Mode=TwoWay}"
+                   x:Name="txtBlock"/>
+        <Button Content="Кнопка" Click="Button_Click" />
+        <TextBox Text="{Binding ElementName=txtBlock, Path=FontSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+    </StackPanel>
 </Window>
