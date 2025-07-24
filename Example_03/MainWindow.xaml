@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Example_03"
         mc:Ignorable="d"
-        Title="MainWindow" Height="150" Width="300">
+        Title="MainWindow" Height="150" Width="300">  
     <Window.Resources>
-        <local:MyData x:Key="myData"/>
+        <local:MyData x:Key="MyData"/>
     </Window.Resources>
-    <StackPanel DataContext="{StaticResource myData}">
-        <Slider Value="{Binding Path=Value, Mode=TwoWay}"/>
+    <StackPanel DataContext="{StaticResource MyData}">
+        <Slider Value="{Binding Value}"/>
         <TextBlock Text="{Binding Value}"/>       
     </StackPanel>
 </Window>
